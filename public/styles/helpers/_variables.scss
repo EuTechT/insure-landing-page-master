@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
-$main-font-family: 'Karla', sans-serif;;
+$main-font-family: 'Karla', sans-serif;
 $main-font-size: 16px;
 
+$main-color: hsl(0, 0%, 98%);
+
 $headings-font-family: 'DM Serif Display', serif;
+
+$main-background: hsl(256, 26%, 20%);
+$secondary-background: hsl(270, 9%, 17%);
+
+$footer-background: hsl(0, 0%, 98%);
+
+$color-heading-footer: rgb(131, 131, 133);

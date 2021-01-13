@@ -1,0 +1,70 @@
+.footer {
+    width: 100%;
+    background-color: $footer-background;
+
+    &__wrapper {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        hr {
+            width: 70%;
+            color: $main-background;
+            margin: 0 auto;
+        }
+    }
+}
+
+.footer__header {
+    width: 100%;
+    @include flexbox($direction: column);
+    background-image: url("./../images/bg-pattern-footer-mobile.svg");
+
+    img {
+        margin-top: 5rem;
+    }
+}
+
+.social {
+    width: 40%;
+    margin: 2rem 0;
+    ul {
+        width: 100%;
+        @include flexbox($justify-content: space-between);
+    }
+}
+
+.social ul li a img {
+    margin: 0;
+}
+
+.footer__links {
+    width: 100%;
+    @include flexbox($direction: column);
+}
+
+.card__links {
+    width: 88%;
+    @include flexbox($direction: column);
+    margin: 1rem 0;
+
+    h4 {
+        text-transform: uppercase;
+        color: $color-heading-footer;
+        font-weight: 700;
+        margin: 1rem 0 2rem 0;
+    }
+}
+
+.links ul li {
+    margin-bottom: 1rem;
+}
+
+.links ul li a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $secondary-background;
+    font-weight: 700;
+}

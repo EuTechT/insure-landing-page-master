@@ -19,7 +19,8 @@
 
   <header class="header">
     <div class="header__wrapper">
-      <img src="./public/images/logo.svg" alt="Insure - Logo">
+      <a href="#"><img src="./public/images/logo.svg" alt="Insure - Logo"></a>
+      
 
       <button>
         <img src="./public/images/icon-hamburger.svg" alt="Open - Icon">
@@ -27,73 +28,74 @@
 
       <nav class="navbar">
         <ul>
-          <li><a href="" class="navlink">How we work</a></li>
-          <li><a href="" class="navlink">Blog</a></li>
-          <li><a href="" class="navlink">Account</a></li>
-          <li><a href="" class="navlink">View plans</a></li>
+          <li><a href="#" class="navlink">How we work</a></li>
+          <li><a href="#" class="navlink">Blog</a></li>
+          <li><a href="#" class="navlink">Account</a></li>
+          <li><a href="#" class="navlink">View plans</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <div class="main-content">
-    <div class="main-content__wrapper">
-      <section class="introduction">
+  <div class="container">
+    <section class="introduction">
+      <div class="introduction__wrapper">
         <img src="./public/images/image-intro-mobile.jpg" alt="">
 
-        <h1>Humanizing your insurance.</h1>
+        <hr class="main-hr">
+
+        <h1 class="headings">Humanizing your insurance.</h1>
 
         <p>Get your life insurance coverage easier and faster. We blend our expertise 
         and technology to help you find the plan that’s right for you. Ensure you 
         and your loved ones are protected.</p>
       
-        <button>View plans</button>
-        
+        <button class="button">View plans</button>
+      </div>        
+    </section>
+
+    <main class="main-content">
+      <section class="main-content__intro">
+        <hr class="main-hr">
+
+        <h2 class="headings">We’re different</h2>
+
+        <div class="card">
+          <img class="card__img" src="./public/images/icon-snappy-process.svg" alt="Snappy Process">
+
+          <h3 class="headings card__heading">Snappy Process</h3>
+          
+          <p>Our application process can be completed in minutes, not hours. Don’t get 
+          stuck filling in tedious forms.</p>
+        </div>
+          
+        <div class="card">
+          <img class="card__img" src="./public/images/icon-affordable-prices.svg" alt="Affordable Prices">
+
+          <h3 class="headings card__heading">Affordable Prices</h3>
+          
+          <p>We don’t want you worrying about high monthly costs. Our prices may be low, 
+          but we still offer the best coverage possible.</p>
+        </div>
+
+        <div class="card">
+          <img class="card__img" src="./public/images/icon-people-first.svg" alt="People First">
+
+          <h3 class="headings card__heading">People First</h3>
+          
+          <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make 
+          sure you’re covered when you need it.</p>
+        </div>
       </section>
 
-      <hr>
+      <section class="main-content__find">
+        <div class="main-content__find__card">
+          <h2 class="headings">Find out more about how we work</h2>
 
-      <main class="main">
-        <section class="main__intro">
-          <h2>We’re different</h2>
-
-          <div class="card">
-            <img src="./public/images/icon-snappy-process.svg" alt="Snappy Process">
-
-            <h3>Snappy Process</h3>
-          
-            <p>Our application process can be completed in minutes, not hours. Don’t get 
-            stuck filling in tedious forms.</p>
-          </div>
-          
-          <div class="card">
-            <img src="./public/images/icon-affordable-prices.svg" alt="Affordable Prices">
-
-            <h3>Affordable Prices</h3>
-          
-            <p>We don’t want you worrying about high monthly costs. Our prices may be low, 
-            but we still offer the best coverage possible.</p>
-          </div>
-
-          <div class="card">
-            <img src="./public/images/icon-people-first.svg" alt="People First">
-
-            <h3>People First</h3>
-          
-            <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-            sure you’re covered when you need it.</p>
-          </div>
-        </section>
-
-        <section class="main__find">
-          <div>
-            <h2>Find out more about how we work</h2>
-
-            <button>How we work</button>
-          </div>
-        </section>
-      </main>
-    </div>
+          <button class="button">How we work</button>
+        </div>
+      </section>
+    </main>
   </div>
 
   <footer class="footer">
@@ -103,10 +105,10 @@
 
         <div class="social">
           <ul>
-            <li><a href="" class="social__links"><img src="./public/images/icon-facebook.svg" alt="Facebook - Icon"></a></li>
-            <li><a href="" class="social__links"><img src="./public/images/icon-twitter.svg" alt="Twitter - Icon"></a></li>
-            <li><a href="" class="social__links"><img src="./public/images/icon-pinterest.svg" alt="Pinterest - Icon"></a></li>
-            <li><a href="" class="social__links"><img src="./public/images/icon-instagram.svg" alt="Instagram - Icon"></a></li>
+            <li><a href="#" class="social__links"><img src="./public/images/icon-facebook.svg" alt="Facebook - Icon"></a></li>
+            <li><a href="#" class="social__links"><img src="./public/images/icon-twitter.svg" alt="Twitter - Icon"></a></li>
+            <li><a href="#" class="social__links"><img src="./public/images/icon-pinterest.svg" alt="Pinterest - Icon"></a></li>
+            <li><a href="#" class="social__links"><img src="./public/images/icon-instagram.svg" alt="Instagram - Icon"></a></li>
           </ul>
         </div>
       </header>
@@ -119,10 +121,10 @@
           
           <div class="links">
             <ul>
-              <li><a href="">How we work</a></li>
-              <li><a href="">Why Insure?</a></li>
-              <li><a href="">View plans</a></li>
-              <li><a href="">Reviews</a></li>
+              <li><a href="#">How we work</a></li>
+              <li><a href="#">Why Insure?</a></li>
+              <li><a href="#">View plans</a></li>
+              <li><a href="#">Reviews</a></li>
             </ul>
           </div>
         </div>
@@ -132,10 +134,10 @@
 
           <div class="links">
             <ul>
-              <li><a href="">FAQ</a></li>
-              <li><a href="">Terms of use</a></li>
-              <li><a href="">Privacy policy</a></li>
-              <li><a href="">Cookies</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Terms of use</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Cookies</a></li>
             </ul>
           </div>
         </div>
@@ -145,9 +147,9 @@
           
           <div class="links">
             <ul>
-              <li><a href="">Sales</a></li>
-              <li><a href="">Support</a></li>
-              <li><a href="">Live chat</a></li>
+              <li><a href="#">Sales</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Live chat</a></li>
             </ul>
           </div> 
         </div>
@@ -157,9 +159,9 @@
           
           <div class="links">
             <ul>
-              <li><a href="">Careers</a></li>
-              <li><a href="">Press</a></li>
-              <li><a href="">Licenses</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Licenses</a></li>
             </ul>
           </div>
         </div>

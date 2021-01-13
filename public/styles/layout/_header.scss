@@ -1,0 +1,24 @@
+.header {
+    width: 100%;
+    height: 80px;
+
+    @include flexbox();
+
+    &__wrapper {
+        width: 100%;
+        padding: 0 2rem;
+        max-width: 1440px;
+
+        @include flexbox($justify-content: space-between);
+
+        button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+}
+
+.navbar {
+    display: none;
+}

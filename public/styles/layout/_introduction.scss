@@ -1,0 +1,33 @@
+.introduction {
+    width: 100%;
+
+    background-color: $main-background;
+
+    &__wrapper {
+        width: 100%;
+        max-width: 1440px;
+
+        margin: 0 auto;
+
+        @include flexbox($direction: column);
+
+        img {
+            max-width: 100%;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: $main-color;
+            width: 88%;
+            text-align: center;
+            margin-top: 3.4rem;
+        }
+
+        p {
+            width: 88%;
+            text-align: center;
+            color: $main-color;
+            margin: 1rem 0 1.6rem 0;
+        }
+    }
+}
