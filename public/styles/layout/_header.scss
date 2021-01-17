@@ -2,12 +2,23 @@
     width: 100%;
     height: 80px;
 
-    @include flexbox();
+    @extend %flex-center;
+
+    &__container {
+        width: 100%;
+        max-width: 1440px;
+
+        margin: 0 auto;
+
+        @extend %flex-center;
+    }
 
     &__wrapper {
         width: 100%;
         padding: 0 2rem;
-        max-width: 1440px;
+        
+
+        position: relative;
 
         @include flexbox($justify-content: space-between);
 
@@ -15,10 +26,94 @@
             border: none;
             background-color: transparent;
             cursor: pointer;
+            outline: 0;
         }
     }
 }
 
 .navbar {
+    width: 0;
+    height: 95vh;
+    position: absolute;
+    right: 0;
+    top: 57px;
+
+    z-index: 1000;
+
+    transition: width 0.25s linear;
+
+    background: {
+        color: $secondary-background;
+        image: url("./../images/bg-pattern-mobile-nav.svg");
+        position: bottom;
+        repeat: repeat-x;
+    }
+
+    padding-top: 1.2rem;
+}
+
+.navlink {
     display: none;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font: {
+        size: 1.2rem;
+        weight: 400;
+    };
+    color: $main-color;
+    padding: 1.2rem;
+}
+
+.navbar-active {
+    width: 100%;
+    min-height: 280px;
+
+    .navlink {
+        display: block;
+    }
+}
+
+@media #{$breakpoint} {
+    .header__wrapper {
+        width: 90%;
+        padding: 0;
+
+        button {
+            display: none;
+        }
+    }
+
+    .navbar {
+        width: auto;
+        position: relative;
+        top: 0;
+        width: auto;
+        height: auto;
+        background: none;
+
+        padding: 0;
+
+        ul {
+            @include flexbox();
+        }
+    }
+
+    .navlink {
+        display: inline-block;
+        color: $color-heading-footer;
+        padding: 0.6rem 1rem;
+        font: {
+            size: 1rem;
+            weight: 700;
+        }
+    }
+
+    .navbar ul li:last-child .navlink {
+        border: 2px solid $main-background;
+        color: $main-background;
+        width: auto;
+
+        padding: 0.6rem 1.6rem;
+    }
 }

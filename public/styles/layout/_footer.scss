@@ -2,9 +2,14 @@
     width: 100%;
     background-color: $footer-background;
 
-    &__wrapper {
+    &__container {
         width: 100%;
         max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+        width: 100%;
         margin: 0 auto;
 
         hr {
@@ -17,21 +22,30 @@
 
 .footer__header {
     width: 100%;
-    @include flexbox($direction: column);
+    @extend %flex-column-center;
     background-image: url("./../images/bg-pattern-footer-mobile.svg");
 
-    img {
-        margin-top: 5rem;
-    }
+    padding: 5rem 0 2rem 0;
 }
 
 .social {
-    width: 40%;
-    margin: 2rem 0;
+    width: auto;
+    margin-top: 2rem;
     ul {
-        width: 100%;
-        @include flexbox($justify-content: space-between);
+        width: auto;
+
+        li {
+            display: inline-block;
+        }
+
+        li+li {
+            margin-left: 1.2rem;
+        }
     }
+}
+
+.social__links {
+    display: inline-block;
 }
 
 .social ul li a img {
@@ -40,20 +54,26 @@
 
 .footer__links {
     width: 100%;
-    @include flexbox($direction: column);
+    @extend %flex-column-center;
+
+    padding: 3rem 0 4rem 0;
 }
 
 .card__links {
     width: 88%;
-    @include flexbox($direction: column);
-    margin: 1rem 0;
+    @extend %flex-column-center;
+
 
     h4 {
         text-transform: uppercase;
         color: $color-heading-footer;
         font-weight: 700;
-        margin: 1rem 0 2rem 0;
+        margin-bottom: 2rem;
     }
+}
+
+.card__links+.card__links {
+    margin-top: 2rem;
 }
 
 .links ul li {
@@ -67,4 +87,45 @@
     text-transform: uppercase;
     color: $secondary-background;
     font-weight: 700;
+}
+
+@media #{$breakpoint} {
+    .footer__container {
+        background: {
+            image: url("./../images/bg-pattern-footer-desktop.svg");
+            repeat: no-repeat;
+        }
+    }
+
+    .footer__wrapper {
+        width: 90%;
+
+        hr {
+            width: 100%;
+        }
+    }
+
+    .footer__header {
+        background-image: none;
+        flex-direction: row;
+        justify-content: space-between;
+
+        img {
+            margin: 0;
+        }
+    }
+
+    .social {
+        margin: 0;
+    }
+
+    .footer__links {
+        flex-direction: row;
+        align-items: flex-start;
+        padding-top: 2rem;
+    }
+
+    .card__links+.card__links {
+        margin: 0;
+    }
 }

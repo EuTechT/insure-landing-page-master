@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon-32x32.png">
   <link rel="stylesheet" href="./public/styles/styles.css">
+  <script src="./public/scripts/toggle.js" defer></script>
   
   <title>Frontend Mentor | Insure landing page</title>
 
@@ -18,151 +19,174 @@
 <body>
 
   <header class="header">
-    <div class="header__wrapper">
-      <a href="#"><img src="./public/images/logo.svg" alt="Insure - Logo"></a>
-      
-
-      <button>
-        <img src="./public/images/icon-hamburger.svg" alt="Open - Icon">
-      </button>
-
-      <nav class="navbar">
-        <ul>
-          <li><a href="#" class="navlink">How we work</a></li>
-          <li><a href="#" class="navlink">Blog</a></li>
-          <li><a href="#" class="navlink">Account</a></li>
-          <li><a href="#" class="navlink">View plans</a></li>
-        </ul>
-      </nav>
+    <div class="header__container">
+      <div class="header__wrapper">
+        <a href="#"><img src="./public/images/logo.svg" alt="Insure - Logo"></a>
+        
+  
+        <button id="btn-menu">
+          <img id="img-btn" src="./public/images/icon-hamburger.svg" alt="Open - Icon">
+        </button>
+  
+        <nav id="menu-mobile" class="navbar">
+          <ul>
+            <li><a href="#" class="navlink is-navlink">How we work</a></li>
+            <li><a href="#" class="navlink is-navlink">Blog</a></li>
+            <li><a href="#" class="navlink is-navlink">Account</a></li>
+            <li><a href="#" class="navlink is-navlink is-button-dark">View plans</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
   <div class="container">
     <section class="introduction">
-      <div class="introduction__wrapper">
-        <img src="./public/images/image-intro-mobile.jpg" alt="">
+      <div class="introduction__container">
+        <div class="introduction__wrapper">
+          <img class="img-intro-mobile" src="./public/images/image-intro-mobile.jpg" alt="Image Intro - Mobile">
+          <img class="img-intro-desktop" src="./public/images/image-intro-desktop.jpg" alt="Image Intro - Mobile">
 
-        <hr class="main-hr">
+          <div class="introduction-text">
+            <img class="bg-pattern-intro-left-mobile" src="./public/images/bg-pattern-intro-left-mobile.svg" alt="Bg Pattern Intro Left - Mobile">
+            <img class="bg-pattern-intro-right-mobile" src="./public/images/bg-pattern-intro-right-mobile.svg" alt="Bg Pattern Intro Right - Mobile">
 
-        <h1 class="headings">Humanizing your insurance.</h1>
+            <hr class="main-hr">
+          
+            <h1 class="headings">Humanizing your insurance.</h1>
 
-        <p>Get your life insurance coverage easier and faster. We blend our expertise 
-        and technology to help you find the plan that’s right for you. Ensure you 
-        and your loved ones are protected.</p>
-      
-        <button class="button">View plans</button>
+            <p>Get your life insurance coverage easier and faster. We blend our expertise 
+            and technology to help you find the plan that’s right for you. Ensure you 
+            and your loved ones are protected.</p>
+        
+            <button class="button is-button-light">View plans</button>
+          </div>
+        </div>
+
+        <img class="bg-pattern-intro-left-desktop" src="./public/images/bg-pattern-intro-left-desktop.svg" alt="Bg Pattern Intro Left - Mobile">
+        <img class="bg-pattern-intro-right-desktop" src="./public/images/bg-pattern-intro-right-desktop.svg" alt="Bg Pattern Intro Right - Mobile">
       </div>        
     </section>
 
     <main class="main-content">
       <section class="main-content__intro">
-        <hr class="main-hr">
+        <div class="intro__wrapper">
+          <div class="heading-container">
+            <hr class="main-hr">
 
-        <h2 class="headings">We’re different</h2>
-
-        <div class="card">
-          <img class="card__img" src="./public/images/icon-snappy-process.svg" alt="Snappy Process">
-
-          <h3 class="headings card__heading">Snappy Process</h3>
-          
-          <p>Our application process can be completed in minutes, not hours. Don’t get 
-          stuck filling in tedious forms.</p>
-        </div>
-          
-        <div class="card">
-          <img class="card__img" src="./public/images/icon-affordable-prices.svg" alt="Affordable Prices">
-
-          <h3 class="headings card__heading">Affordable Prices</h3>
-          
-          <p>We don’t want you worrying about high monthly costs. Our prices may be low, 
-          but we still offer the best coverage possible.</p>
-        </div>
-
-        <div class="card">
-          <img class="card__img" src="./public/images/icon-people-first.svg" alt="People First">
-
-          <h3 class="headings card__heading">People First</h3>
-          
-          <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-          sure you’re covered when you need it.</p>
+            <h2 class="headings">We’re different</h2>
+          </div>
+  
+          <div class="card-container">
+            <div class="card">
+              <img class="card__img" src="./public/images/icon-snappy-process.svg" alt="Snappy Process">
+    
+              <h3 class="headings card__heading">Snappy Process</h3>
+              
+              <p>Our application process can be completed in minutes, not hours. Don’t get 
+              stuck filling in tedious forms.</p>
+            </div>
+              
+            <div class="card">
+              <img class="card__img" src="./public/images/icon-affordable-prices.svg" alt="Affordable Prices">
+    
+              <h3 class="headings card__heading">Affordable Prices</h3>
+              
+              <p>We don’t want you worrying about high monthly costs. Our prices may be low, 
+              but we still offer the best coverage possible.</p>
+            </div>
+    
+            <div class="card">
+              <img class="card__img" src="./public/images/icon-people-first.svg" alt="People First">
+    
+              <h3 class="headings card__heading">People First</h3>
+              
+              <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make 
+              sure you’re covered when you need it.</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="main-content__find">
-        <div class="main-content__find__card">
-          <h2 class="headings">Find out more about how we work</h2>
-
-          <button class="button">How we work</button>
+        <div class="find__wrapper">
+          <div class="find__card">
+            <h2 class="headings">Find out more about how we work</h2>
+  
+            <button class="button is-button-light">How we work</button>
+          </div>
         </div>
       </section>
     </main>
   </div>
 
   <footer class="footer">
-    <div class="footer__wrapper">
-      <header class="footer__header">
-        <img src="./public/images/logo.svg" alt="Insure - Logo">
-
-        <div class="social">
-          <ul>
-            <li><a href="#" class="social__links"><img src="./public/images/icon-facebook.svg" alt="Facebook - Icon"></a></li>
-            <li><a href="#" class="social__links"><img src="./public/images/icon-twitter.svg" alt="Twitter - Icon"></a></li>
-            <li><a href="#" class="social__links"><img src="./public/images/icon-pinterest.svg" alt="Pinterest - Icon"></a></li>
-            <li><a href="#" class="social__links"><img src="./public/images/icon-instagram.svg" alt="Instagram - Icon"></a></li>
-          </ul>
-        </div>
-      </header>
-
-      <hr>
-
-      <div class="footer__links">
-        <div class="card__links">
-          <h4>Our company</h4>
-          
-          <div class="links">
+    <div class="footer__container">
+      <div class="footer__wrapper">
+        <header class="footer__header">
+          <img src="./public/images/logo.svg" alt="Insure - Logo">
+  
+          <div class="social">
             <ul>
-              <li><a href="#">How we work</a></li>
-              <li><a href="#">Why Insure?</a></li>
-              <li><a href="#">View plans</a></li>
-              <li><a href="#">Reviews</a></li>
+              <li><a href="#" class="social__links"><img src="./public/images/icon-facebook.svg" alt="Facebook - Icon"></a></li>
+              <li><a href="#" class="social__links"><img src="./public/images/icon-twitter.svg" alt="Twitter - Icon"></a></li>
+              <li><a href="#" class="social__links"><img src="./public/images/icon-pinterest.svg" alt="Pinterest - Icon"></a></li>
+              <li><a href="#" class="social__links"><img src="./public/images/icon-instagram.svg" alt="Instagram - Icon"></a></li>
             </ul>
           </div>
-        </div>
-
-        <div class="card__links">
-          <h4>Help me</h4>
-
-          <div class="links">
-            <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Terms of use</a></li>
-              <li><a href="#">Privacy policy</a></li>
-              <li><a href="#">Cookies</a></li>
-            </ul>
+        </header>
+  
+        <hr>
+  
+        <div class="footer__links">
+          <div class="card__links">
+            <h4>Our company</h4>
+            
+            <div class="links">
+              <ul>
+                <li><a href="#" class="is-link">How we work</a></li>
+                <li><a href="#" class="is-link">Why Insure?</a></li>
+                <li><a href="#" class="is-link">View plans</a></li>
+                <li><a href="#" class="is-link">Reviews</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-
-        <div class="card__links">
-          <h4>Contact</h4>
-          
-          <div class="links">
-            <ul>
-              <li><a href="#">Sales</a></li>
-              <li><a href="#">Support</a></li>
-              <li><a href="#">Live chat</a></li>
-            </ul>
-          </div> 
-        </div>
-
-        <div class="card__links">
-          <h4>Others</h4>
-          
-          <div class="links">
-            <ul>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Press</a></li>
-              <li><a href="#">Licenses</a></li>
-            </ul>
+  
+          <div class="card__links">
+            <h4>Help me</h4>
+  
+            <div class="links">
+              <ul>
+                <li><a href="#" class="is-link">FAQ</a></li>
+                <li><a href="#" class="is-link">Terms of use</a></li>
+                <li><a href="#" class="is-link">Privacy policy</a></li>
+                <li><a href="#" class="is-link">Cookies</a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="card__links">
+            <h4>Contact</h4>
+            
+            <div class="links">
+              <ul>
+                <li><a href="#" class="is-link">Sales</a></li>
+                <li><a href="#" class="is-link">Support</a></li>
+                <li><a href="#" class="is-link">Live chat</a></li>
+              </ul>
+            </div> 
+          </div>
+  
+          <div class="card__links">
+            <h4>Others</h4>
+            
+            <div class="links">
+              <ul>
+                <li><a href="#" class="is-link">Careers</a></li>
+                <li><a href="#" class="is-link">Press</a></li>
+                <li><a href="#" class="is-link">Licenses</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

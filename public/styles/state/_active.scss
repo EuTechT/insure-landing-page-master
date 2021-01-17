@@ -1,0 +1,33 @@
+.is-button-light:hover {
+    background-color: $main-color;
+    color: $main-background;
+}
+
+.is-navlink:hover {
+    text-transform: uppercase;       
+    border: 2px solid $main-color;
+    width: 88%;
+    color: $main-color;
+    margin: 0 auto;
+}
+
+/*.is-social {
+    backdrop-filter: ;
+}*/
+
+.is-link:hover {
+    text-decoration: underline;
+}
+
+@media #{$breakpoint} {
+   .is-button-dark:hover{
+    background-color: $secondary-background !important;
+    color: #fff !important;
+    } 
+
+    .is-navlink:hover {
+        color: $secondary-background;
+        border: none;
+        width: auto;
+    }
+}
