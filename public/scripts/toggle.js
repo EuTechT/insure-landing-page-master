@@ -2,6 +2,7 @@ const btnMenu = window.document.querySelector('#btn-menu');
 const menuMobile = window.document.querySelector('#menu-mobile');
 const imgBtn = window.document.querySelector('#img-btn');
 const navLink = window.document.querySelectorAll('.navlink');
+const header = window.document.querySelector('.header');
 
 function changeImgBtn(src){
     if(src == "./public/images/icon-hamburger.svg") {
@@ -24,3 +25,18 @@ navLink.forEach((link) => {
         }
     });
 });
+
+window.onresize = function() { 
+    if(window.innerWidth > 1024 && menuMobile.className == 'navbar navbar-active') { 
+        imgBtn.src = changeImgBtn(imgBtn.getAttribute('src')); 
+        menuMobile.classList.remove('navbar-active'); 
+    } 
+} 
+
+window.onscroll = function() {
+    if(window.innerWidth <= 1024 && window.scrollY > 0) {
+        header.style.position = 'fixed';
+    } else {
+        header.style.position = 'relative';
+    }
+}
