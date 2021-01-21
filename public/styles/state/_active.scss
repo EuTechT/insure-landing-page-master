@@ -1,19 +1,17 @@
 .is-button-light:hover {
     background-color: $main-color;
     color: $main-background;
+
+    transition: all 0.75s;
 }
 
 .is-navlink:hover {
     text-transform: uppercase;       
     border: 2px solid $main-color;
-    width: 88%;
     color: $main-color;
-    margin: 0 auto;
-}
 
-/*.is-social {
-    backdrop-filter: ;
-}*/
+    transition: all 0.75s;
+}
 
 .is-link:hover {
     text-decoration: underline;
@@ -23,11 +21,12 @@
    .is-button-dark:hover{
     background-color: $secondary-background !important;
     color: #fff !important;
+
+    transition: all 0.75s;
     } 
 
     .is-navlink:hover {
         color: $secondary-background;
         border: none;
-        width: auto;
     }
 }

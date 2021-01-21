@@ -15,7 +15,7 @@
 
     &__container {
         width: 100%;
-        max-width: 1440px;
+        max-width: $max-width;
 
         margin: 0 auto;
 
@@ -63,8 +63,8 @@
 }
 
 .navlink {
-    display: none;
-    width: 100%;
+    display: block;
+    width: 88%;
     text-align: center;
     text-transform: uppercase;
     font: {
@@ -72,6 +72,7 @@
         weight: 400;
     };
     color: $main-color;
+    margin: 0 auto;
     padding: 1.2rem;
 }
 
@@ -84,10 +85,6 @@
 
     ul {
         height: 320px;
-    }
-
-    .navlink {
-        display: block;
     }
 }
 
@@ -103,11 +100,11 @@
 
     .navbar {
         width: auto;
+        height: auto;
         position: relative;
         top: 0;
         right: 0;
-        width: auto;
-        height: auto;
+        
         background: none;
 
         padding: 0;
@@ -118,6 +115,7 @@
     }
 
     .navlink {
+        width: 100%;
         display: inline-block;
         color: $color-heading-footer;
         padding: 0.6rem 1rem;
@@ -130,21 +128,7 @@
     .navbar ul li:last-child .navlink {
         border: 2px solid $main-background;
         color: $main-background;
-        width: auto;
 
         padding: 0.6rem 1.6rem;
-    }
-
-    .navbar-active {
-        width: auto;
-        min-height: auto;
-
-        ul {
-            height: auto;
-        }
-    
-        .navlink {
-            display: inline-block;
-        }
     }
 }

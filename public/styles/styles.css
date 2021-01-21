@@ -88,13 +88,14 @@ p {
 }
 
 .navlink {
-  display: none;
-  width: 100%;
+  display: block;
+  width: 88%;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 400;
   color: #fafafa;
+  margin: 0 auto;
   padding: 1.2rem;
 }
 
@@ -109,9 +110,6 @@ p {
 .navbar-active ul {
   height: 320px;
 }
-.navbar-active .navlink {
-  display: block;
-}
 
 @media all and (min-width: 1025px) {
   .header__wrapper {
@@ -124,11 +122,10 @@ p {
 
   .navbar {
     width: auto;
+    height: auto;
     position: relative;
     top: 0;
     right: 0;
-    width: auto;
-    height: auto;
     background: none;
     padding: 0;
   }
@@ -140,6 +137,7 @@ p {
   }
 
   .navlink {
+    width: 100%;
     display: inline-block;
     color: #838385;
     padding: 0.6rem 1rem;
@@ -150,19 +148,7 @@ p {
   .navbar ul li:last-child .navlink {
     border: 2px solid #2d2640;
     color: #2d2640;
-    width: auto;
     padding: 0.6rem 1.6rem;
-  }
-
-  .navbar-active {
-    width: auto;
-    min-height: auto;
-  }
-  .navbar-active ul {
-    height: auto;
-  }
-  .navbar-active .navlink {
-    display: inline-block;
   }
 }
 .container {
@@ -411,25 +397,19 @@ p {
 }
 
 .social {
-  width: auto;
   margin-top: 2rem;
 }
 .social ul {
-  width: auto;
-}
-.social ul li {
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 .social ul li + li {
   margin-left: 1.2rem;
 }
 
-.social__links {
-  display: inline-block;
-}
-
-.social ul li a img {
-  margin: 0;
+.social__links:hover svg path {
+  fill: #2b272f;
+  transition: all 0.75s;
 }
 
 .footer__links {
@@ -526,19 +506,16 @@ p {
 .is-button-light:hover {
   background-color: #fafafa;
   color: #2d2640;
+  transition: all 0.75s;
 }
 
 .is-navlink:hover {
   text-transform: uppercase;
   border: 2px solid #fafafa;
-  width: 88%;
   color: #fafafa;
-  margin: 0 auto;
+  transition: all 0.75s;
 }
 
-/*.is-social {
-    backdrop-filter: ;
-}*/
 .is-link:hover {
   text-decoration: underline;
 }
@@ -547,12 +524,12 @@ p {
   .is-button-dark:hover {
     background-color: #2b272f !important;
     color: #fff !important;
+    transition: all 0.75s;
   }
 
   .is-navlink:hover {
     color: #2b272f;
     border: none;
-    width: auto;
   }
 }
 
