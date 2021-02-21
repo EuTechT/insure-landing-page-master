@@ -61,12 +61,12 @@
 
     ul {
         width: 100%;
+        padding: 1.2rem 0.8rem;
     }
 }
 
 .navlink {
     display: block;
-    width: 88%;
     text-align: center;
     text-transform: uppercase;
     font: {
@@ -79,12 +79,8 @@
 }
 
 .navbar-active {
-    width: 100vw;
+    width: 100%;
     @include flexbox($align-items: flex-start);
-
-    ul {
-        height: 320px;
-    }
 }
 
 @media #{$breakpoint} {
@@ -109,6 +105,7 @@
         padding: 0;
 
         ul {
+            padding: 0;
             @include flexbox();
         }
     }

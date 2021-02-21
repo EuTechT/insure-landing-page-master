@@ -127,11 +127,11 @@ p {
 }
 .navbar ul {
   width: 100%;
+  padding: 1.2rem 0.8rem;
 }
 
 .navlink {
   display: block;
-  width: 88%;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -142,14 +142,11 @@ p {
 }
 
 .navbar-active {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-}
-.navbar-active ul {
-  height: 320px;
 }
 
 @media all and (min-width: 1025px) {
@@ -171,6 +168,7 @@ p {
     padding: 0;
   }
   .navbar ul {
+    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
