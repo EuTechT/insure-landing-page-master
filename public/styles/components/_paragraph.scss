@@ -1,0 +1,10 @@
+.paragraph {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+@media #{$breakpoint} {
+    .paragraph {
+        text-align: left;
+    }
+}

@@ -1,0 +1,54 @@
+.find {
+    width: 100%;
+
+    &__wrapper {
+        width: 100%;
+        max-width: $max-width;
+        margin: 0 auto 5rem auto;
+    }
+
+    &__card {
+        width: 88%;
+        background: {
+            color: $main-background;
+            image: url("./../images/bg-pattern-how-we-work-mobile.svg");
+            repeat: no-repeat;
+            position: top right;
+        };
+        @extend %flex-column-center;
+        margin: 0 auto;
+    
+        .headings {
+            width: 88%;
+            text-align: center;
+            color: $main-color;
+            margin: 4rem 0 1rem 0;
+        }
+    }
+}
+
+@media #{$breakpoint} {
+    .find__card {
+        width: 90%;
+        background: {
+            image: url("./../images/bg-pattern-how-we-work-desktop.svg");
+            position: right;
+            size: contain;
+        };
+        flex-direction: row;
+        justify-content: space-around;
+
+        padding: 4rem 0;
+
+        .headings {
+            margin: 0;
+            text-align: left;
+            width: 50%;
+            font-size: 4rem;
+        }
+
+        .button {
+            margin: 0;
+        }
+    }
+}

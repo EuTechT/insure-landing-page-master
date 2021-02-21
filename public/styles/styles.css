@@ -35,7 +35,7 @@ p {
   line-height: 1.5;
 }
 
-.introduction__wrapper, .introduction-text, .find__card, .intro__wrapper, .heading-container, .card-container, .card, .footer__header, .footer__links, .card__links {
+.introduction__wrapper, .introduction-text, .intro__wrapper, .heading-container, .card-container, .card, .find__card, .footer__header, .footer__links, .card__links {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,19 +58,36 @@ p {
   height: 45px;
   margin-bottom: 4rem;
   cursor: pointer;
+  z-index: 10;
 }
 
 .headings {
-  font-family: "DM Serif Display", serif;
+  font-size: 2.8rem;
   font-weight: 400;
+  font-family: "DM Serif Display", serif;
 }
 
+@media all and (min-width: 1025px) {
+  .headings {
+    font-size: 4rem;
+  }
+}
 .main-hr {
   width: 150px;
   color: #2d2640;
   margin-bottom: 1.6rem;
 }
 
+.paragraph {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media all and (min-width: 1025px) {
+  .paragraph {
+    text-align: left;
+  }
+}
 .header {
   width: 100%;
   height: 80px;
@@ -103,7 +120,7 @@ p {
 
 .navbar {
   width: 100%;
-  height: 95vh;
+  height: calc(100vh - 80px);
   overflow-y: auto;
   position: absolute;
   right: -100%;
@@ -208,16 +225,14 @@ p {
 .introduction-text .main-hr {
   display: none;
 }
-.introduction-text h1 {
-  font-size: 2.8rem;
-  color: #fafafa;
+.introduction-text .headings {
   width: 88%;
   text-align: center;
+  color: #fafafa;
   margin-top: 3.4rem;
 }
-.introduction-text p {
+.introduction-text .paragraph {
   width: 88%;
-  text-align: center;
   color: #fafafa;
   margin: 1rem 0 1.6rem 0;
 }
@@ -268,13 +283,9 @@ p {
   .introduction-text .main-hr {
     display: initial;
   }
-  .introduction-text h1 {
-    font-size: 4rem;
+  .introduction-text .headings {
     text-align: left;
     margin-top: 2rem;
-  }
-  .introduction-text p {
-    text-align: left;
   }
 
   .bg-pattern-intro-left-mobile, .bg-pattern-intro-right-mobile {
@@ -297,40 +308,15 @@ p {
     bottom: -333px;
   }
 }
-.main-content {
+.intro {
   width: 100%;
 }
-.main-content__intro {
-  width: 100%;
-  max-width: 1440px;
-  margin: 5rem auto;
-}
-.main-content__intro h2 {
-  font-size: 2.8rem;
-}
-
-.find__wrapper {
+.intro__container {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto 5rem auto;
-}
-
-.find__card {
-  width: 88%;
-  background-color: #2d2640;
-  background-image: url("./../images/bg-pattern-how-we-work-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: top right;
   margin: 0 auto;
+  padding: 5rem 0;
 }
-.find__card h2 {
-  width: 88%;
-  font-size: 2.4rem;
-  text-align: center;
-  color: #fafafa;
-  margin: 4rem 0 1rem 0;
-}
-
 .intro__wrapper {
   width: 100%;
   margin: 0 auto;
@@ -347,16 +333,11 @@ p {
   font-size: 2rem;
   margin-bottom: 1.2rem;
 }
-.card p {
-  width: 100%;
-  text-align: center;
-}
 
 @media all and (min-width: 1025px) {
-  .main-content__intro {
-    margin: 15rem auto 10rem auto;
+  .intro {
+    padding: 15rem 0 10rem;
   }
-
   .intro__wrapper {
     width: 90%;
     align-items: flex-start;
@@ -364,9 +345,6 @@ p {
 
   .heading-container {
     align-items: flex-start;
-  }
-  .heading-container .headings {
-    font-size: 4rem;
   }
 
   .card-container {
@@ -376,14 +354,35 @@ p {
   .card {
     align-items: flex-start;
   }
-  .card p {
-    text-align: left;
-  }
 
   .card + .card {
     margin-left: 1rem;
   }
+}
+.find {
+  width: 100%;
+}
+.find__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto 5rem auto;
+}
+.find__card {
+  width: 88%;
+  background-color: #2d2640;
+  background-image: url("./../images/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  margin: 0 auto;
+}
+.find__card .headings {
+  width: 88%;
+  text-align: center;
+  color: #fafafa;
+  margin: 4rem 0 1rem 0;
+}
 
+@media all and (min-width: 1025px) {
   .find__card {
     width: 90%;
     background-image: url("./../images/bg-pattern-how-we-work-desktop.svg");
