@@ -38,12 +38,14 @@
 }
 
 .navbar {
-    width: 100%;
+    width: 0;
     height: calc(100vh - 80px);
+    overflow-x: hidden;
     overflow-y: auto;
+    transition: width 0.25s linear;
 
     position: absolute;
-    right: -100%;
+    right: 0;
     top: 80px;
 
     z-index: 1000;
@@ -77,8 +79,7 @@
 }
 
 .navbar-active {
-    right: 0;
-    transition: right 0.3s linear;
+    width: 100vw;
     @include flexbox($align-items: flex-start);
 
     ul {

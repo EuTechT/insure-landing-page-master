@@ -27,16 +27,26 @@ navLink.forEach((link) => {
 });
 
 window.onresize = function() { 
-    if(window.innerWidth > 1024 && menuMobile.className == 'navbar navbar-active') { 
-        imgBtn.src = changeImgBtn(imgBtn.getAttribute('src')); 
-        menuMobile.classList.remove('navbar-active'); 
-    } 
+    removeNavbar();
 } 
 
+function removeNavbar() {
+    if(window.innerWidth > 1024 && menuMobile.className == 'navbar navbar-active') { 
+        imgBtn.src = changeImgBtn(imgBtn.getAttribute('src')); 
+        menuMobile.classList.remove('navbar-active');
+    }
+}
+
 window.onscroll = function() {
-    if(window.innerWidth <= 1024 && window.scrollY > 0) {
+    changeHeader();
+}
+
+function changeHeader() {
+    if(/*window.innerWidth <= 1024 &&*/ window.scrollY > 0) {
         header.style.position = 'fixed';
+        header.style.borderBottom = '1px solid rgb(131, 131, 133)';
     } else {
         header.style.position = 'relative';
+        header.style.borderBottom = 'none';
     }
 }

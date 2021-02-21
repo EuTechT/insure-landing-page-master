@@ -14,15 +14,6 @@ html {
   font-size: 16px;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-@media all and (min-width: 1025px) {
-  body {
-    overflow-x: unset;
-  }
-}
 ul {
   list-style: none;
 }
@@ -119,11 +110,13 @@ p {
 }
 
 .navbar {
-  width: 100%;
+  width: 0;
   height: calc(100vh - 80px);
+  overflow-x: hidden;
   overflow-y: auto;
+  transition: width 0.25s linear;
   position: absolute;
-  right: -100%;
+  right: 0;
   top: 80px;
   z-index: 1000;
   background-color: #2b272f;
@@ -149,8 +142,7 @@ p {
 }
 
 .navbar-active {
-  right: 0;
-  transition: right 0.3s linear;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
