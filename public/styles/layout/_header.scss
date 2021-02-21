@@ -42,7 +42,7 @@
     height: 95vh;
     overflow-y: auto;
 
-    position: fixed;
+    position: absolute;
     right: -100%;
     top: 80px;
 
@@ -78,9 +78,7 @@
 
 .navbar-active {
     right: 0;
-    
-    transition: right 0.25s linear;
-
+    transition: right 0.3s linear;
     @include flexbox($align-items: flex-start);
 
     ul {

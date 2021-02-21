@@ -14,6 +14,15 @@ html {
   font-size: 16px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+@media all and (min-width: 1025px) {
+  body {
+    overflow-x: unset;
+  }
+}
 ul {
   list-style: none;
 }
@@ -37,6 +46,29 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.button {
+  text-transform: uppercase;
+  border: 2px solid #fafafa;
+  background-color: transparent;
+  color: #fafafa;
+  font-weight: 400;
+  width: 145px;
+  height: 45px;
+  margin-bottom: 4rem;
+  cursor: pointer;
+}
+
+.headings {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+.main-hr {
+  width: 150px;
+  color: #2d2640;
+  margin-bottom: 1.6rem;
 }
 
 .header {
@@ -73,7 +105,7 @@ p {
   width: 100%;
   height: 95vh;
   overflow-y: auto;
-  position: fixed;
+  position: absolute;
   right: -100%;
   top: 80px;
   z-index: 1000;
@@ -101,7 +133,7 @@ p {
 
 .navbar-active {
   right: 0;
-  transition: right 0.25s linear;
+  transition: right 0.3s linear;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -480,29 +512,6 @@ p {
     margin: 0;
   }
 }
-.button {
-  text-transform: uppercase;
-  border: 2px solid #fafafa;
-  background-color: transparent;
-  color: #fafafa;
-  font-weight: 400;
-  width: 145px;
-  height: 45px;
-  margin-bottom: 4rem;
-  cursor: pointer;
-}
-
-.headings {
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-}
-
-.main-hr {
-  width: 150px;
-  color: #2d2640;
-  margin-bottom: 1.6rem;
-}
-
 .is-button-light:hover {
   background-color: #fafafa;
   color: #2d2640;

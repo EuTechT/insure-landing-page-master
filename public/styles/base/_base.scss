@@ -14,6 +14,16 @@ html {
     }
 }
 
+body {
+    overflow-x: hidden;
+}
+
+@media #{$breakpoint} {
+    body {
+        overflow-x: unset;
+    }
+}
+
 ul {
     list-style: none;
 }
