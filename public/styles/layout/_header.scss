@@ -42,7 +42,7 @@
     height: calc(100vh - 80px);
     overflow-x: hidden;
     overflow-y: auto;
-    transition: width 0.25s linear;
+    transition: width 0.3s linear;
 
     position: absolute;
     right: 0;
@@ -76,6 +76,9 @@
     color: $main-color;
     margin: 0 auto;
     padding: 1.2rem;
+
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .navbar-active {
